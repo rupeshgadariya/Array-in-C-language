@@ -1,0 +1,25 @@
+// Write a function to find the smallest number from the given array of any size.(TSRS)
+#include<conio.h>
+#include<stdio.h>
+
+int smallest(int ar[], int n)
+{   int temp;
+    for (int i = 0; i < n-1; i++)
+     if( ar[i]<=ar[i+1] )
+        {
+                temp=ar[i];
+                ar[i]=ar[i+1];
+                ar[i+1]=temp;
+        }
+
+        return ar[n-1];
+    
+}
+
+
+    void main()
+{
+        int ch[15]={77,76,94,58,478,45,9,487,1467,457,45,99};
+        printf("%d",smallest(ch,12));
+    getch();
+}
