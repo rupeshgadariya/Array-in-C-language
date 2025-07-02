@@ -1,0 +1,25 @@
+// Write a function to find the greatest number from the given array of any size.(TSRS)
+#include<conio.h>
+#include<stdio.h>
+
+int greatest(int ar[], int n)
+{   int temp;
+    for (int i = 0; i < n-1; i++)
+     if( ar[i]>=ar[i+1] )
+        {
+                temp=ar[i];
+                ar[i]=ar[i+1];
+                ar[i+1]=temp;
+        }
+
+        return ar[n-1];
+    
+}
+
+
+    void main()
+{
+        int ch[15]={377,76,94,45,99,87,245,78,21,87,24,47,78,47,105};
+        printf("%d",greatest(ch,15));
+    getch();
+}
