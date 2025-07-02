@@ -1,0 +1,32 @@
+// Write a function to sort an array of any size. (TSRN) 
+ #include<stdio.h>
+ 
+    void sort(int ar[],int n)
+ {
+        int temp;
+   for(int j=0; j<n; j++)
+    for (int i = 0; i < n-1; i++)
+     if(ar[i]>=ar[i+1])
+      {
+        temp=ar[i];
+        ar[i]=ar[i+1];
+        ar[i+1]=temp;
+      }
+
+ }
+
+    
+     int main()
+     {
+        int ar[9]={65,99,42,87,24,12,74,35,62};
+        for (int i = 0; i < 9; i++)
+         printf("%d ",ar[i]);
+
+        printf("\n\n");
+        sort(ar,9);
+
+        for (int i = 0; i < 9; i++)
+         printf("%d ",ar[i]);
+        return 0;
+     }   
+    
