@@ -1,0 +1,28 @@
+// Write a function to swap two elements of given array with specified indices
+#include<stdio.h>
+#include<conio.h>
+ void swap(int ar[], int x, int y)
+ {
+        int temp;
+        temp=ar[x];
+        ar[x]=ar[y];
+        ar[y]=temp; 
+        
+ }
+
+    void main()
+{ 
+   int ar[]={45,78,78,95,45,47,10};
+
+    for (int i = 0; i < 7; i++)
+    printf("%d  ",ar[i]);
+   
+   swap(ar,0,6);
+   printf("\n");
+
+   for (int i = 0; i < 7; i++)
+    printf("%d  ",ar[i]);
+   
+        
+    getch();
+}
